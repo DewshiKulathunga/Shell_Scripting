@@ -1,0 +1,43 @@
+# importing the module
+#import pandas as pd
+
+print("Welcome to Security response team!\nPlease enter the following details")
+
+fullName = input("Full name : ")
+email = input("Email : ")
+
+print("\nPlease select an issue from the following")
+print("------------------ MENU -----------------")
+print("1 : Cyber bullying")
+print("2 : Ransomware")
+print("3 : Malware")
+print("4 : Virus")
+print("5 : Other....")
+issueNumber = int(input("Enter issue number (1, 2, 3, 4 or 5) : "))
+
+if issueNumber == 5:
+    issue = input("\nEnter your issue: ")
+elif issueNumber == 1:
+    issue = "Cyber bullying"
+elif issueNumber == 2:
+    issue = "Ransomware"
+elif issueNumber == 3:
+    issue = "Malware"
+elif issueNumber == 4:
+    issue = "Virus"
+else:
+    print("Invalid input")
+    
+text_file = open("sample.txt", "w")
+n = text_file. write('Full name : ' + fullName)
+n = text_file. write('\nEmail : ' + email)
+n = text_file. write('\nIssue : ' + issue + "\n\n")
+text_file.close()
+
+if (issueNumber == 1 or issueNumber == 2):
+    print("Your details have been sent to our researcher 1")
+elif (issueNumber == 3 or issueNumber == 4):
+    print("Your details have been sent to our researcher 2")
+else:
+    print("Your details have been sent to our researcher 3")
+
